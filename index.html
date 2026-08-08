@@ -52,7 +52,17 @@ p{margin:0}
 body[data-lock="on"]{overflow:hidden}
 
 /* hero */
-.hero{background:linear-gradient(160deg,#0F2A44 0%,#1B5E8C 100%);color:#fff}
+.hero{position:relative;background:#0F2A44 url('assets/img/hero.jpg') center/cover no-repeat;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,42,68,.88) 0%,rgba(15,42,68,.62) 46%,rgba(27,94,140,.28) 100%)}
+.hero .lede,.hero .trust{text-shadow:0 1px 12px rgba(15,42,68,.6)}
+.hero h1{text-shadow:0 2px 18px rgba(15,42,68,.55)}
+.hero-in{position:relative}
+.figband{margin-top:48px;border:1px solid #DCE2E6;border-radius:10px;overflow:hidden;background:#fff}
+.figband img{width:100%}
+.figband figcaption{padding:14px 20px;border-top:1px solid #DCE2E6;color:#5F6B76;font-size:.82rem;letter-spacing:.02em}
+.splitfig{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;margin-top:48px}
+.splitfig img{border:1px solid #DCE2E6;border-radius:10px}
+@media (max-width:760px){.splitfig{grid-template-columns:1fr;gap:24px}}
 .hero-in{padding-top:104px;padding-bottom:92px}
 .hero h1,.hero h2,.hero h3{color:#fff}
 .hero .eyebrow{color:#D08A55}
@@ -187,7 +197,14 @@ dl.facts dd{margin:6px 0 0;color:#0F2A44;font-weight:600}
       <div class="card"><h3>Heating</h3><p>Boilers, in floor radiant, baseboard, and shop and barn heaters.</p></div>
       <div class="card"><h3>Cottage closing and opening</h3><p>Drained and blown out in the fall, recharged and tested in the spring.</p></div>
     </div>
-    <a class="more" href="services.html">The full list</a>
+    <div class="splitfig">
+      <img src="assets/img/undersink.jpg" alt="Under sink supply lines, trap and shutoff valves on a service call" loading="lazy">
+      <div>
+        <h3>Straightened out, then left tidy</h3>
+        <p class="sub" style="margin-top:12px">Most of what we fix sits under a sink or behind a panel. We label the shutoffs, replace what is failing rather than patching it, and haul the old parts away.</p>
+        <a class="more" href="services.html">The full list</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -217,6 +234,10 @@ dl.facts dd{margin:6px 0 0;color:#0F2A44;font-weight:600}
       <li>Alanson</li>
       <li>Emmet County</li>
     </ul>
+    <figure class="figband" style="margin:0;margin-top:48px">
+      <img src="assets/img/traps.jpg" alt="Three finished trap and drain assemblies under kitchen sinks" loading="lazy">
+      <figcaption>Finished trap assemblies from three Emmet County jobs. Permitted, pressure tested and inspected.</figcaption>
+    </figure>
     <a class="more" href="contact.html">Get in touch</a>
   </div>
 </section>
